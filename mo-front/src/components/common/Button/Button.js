@@ -4,7 +4,7 @@ const Button = ({ className, type = "button", colorStyle, onClick, disabled = fa
   return (
     <button
       type={type}
-      className={`${className} ${colorStyle}`}
+      className={`button ${className} ${colorStyle}`}
       onClick={onClick}
       disabled={disabled}
     >
