@@ -5,41 +5,21 @@
   font-weight: 700;
 }
 
-.formContainer {
-  width: 90vw;
-  height: 550px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border-radius: 20px;
-  background: linear-gradient(to right, #F6EDE8, rgba(167, 216, 184, 0.5));
-  z-index: 6000;
-}
-
 .form {
   width: 100%;
   max-width: 500px;
   margin: auto;
 }
 
-.formTitle {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
-  color: #5A1D3E;
-  margin: 25px 0;
-  text-align: center;
-}
-
 .input-group {
-  margin: 1em 0;
+  margin: 1.5em 0;
+  position: relative;
 }
 
 .input-group input,
 .input-group textarea {
   font-size: 100%;
-  padding: 0.7em;
+  padding: 0.4em;
   outline: none;
   color: #5A1D3E;
   border: none;
@@ -49,10 +29,104 @@
   resize: none;
 }
 
+.input-group label {
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 0.3em;
+  left: 0;
+  color: #5A1D3E;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:valid ~ label {
+  transform: translateY(-70%) scale(0.8);
+  margin: 0;
+  padding: 0.4em;
+  background: transparent;
+}
+
 .messageInput {
   margin-top: 4em;
 }
 
 .submitArea {
   text-align: center;
+
+}
+
+.submitContact {
+  padding: 0.5em;
+  margin-top: 2em;
+}
+
+
+/* Tablettes */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .form {
+    padding: 0 2em;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 1.1rem;
+    padding: 0.6em;
+  }
+
+  .input-group label {
+    font-size: 1.1rem;
+  }
+
+  .submitContact {
+    font-size: 1.1rem;
+    padding: 0.8em;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) and (max-width: 1399px) {
+  .form {
+    padding: 0 3em;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 1.2rem;
+    padding: 0.7em;
+  }
+
+  .input-group label {
+    font-size: 1.2rem;
+  }
+
+  .submitContact {
+    font-size: 1.2rem;
+    padding: 1em;
+  }
+}
+
+/* Très grands écrans */
+@media screen and (min-width: 1400px) {
+  .form {
+    padding: 0 4em;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    font-size: 1.2rem;
+   
+  }
+
+  .input-group label {
+    font-size: 1.2rem;
+  }
+
+  .submitContact {
+    font-size: 1rem;
+    padding: 1.2em;
+  }
 }
