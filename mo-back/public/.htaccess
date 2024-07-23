@@ -1,0 +1,25 @@
+RewriteEngine On
+RewriteBase /
+
+# Rediriger toutes les requêtes vers index.php sauf si le fichier ou le répertoire existe
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Empêcher l'accès direct au fichier .htaccess
+<Files .htaccess>
+    Order Allow,Deny
+    Deny from all
+</Files>
+
+# Options pour améliorer la sécurité
+<FilesMatch "\.(php|html|json)$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Autoriser les en-têtes de la réponse HTTP (utile pour les API RESTful)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS, DELETE, PUT"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
