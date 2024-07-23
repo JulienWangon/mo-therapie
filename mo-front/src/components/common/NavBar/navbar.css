@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+.navbar-toggler {
+  color: #571D3E !important;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%; 
+  z-index: 2000;
+  background-color: transparent !important;
+}
+
+.navItem {
+  margin-bottom: 0.1em;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #B8A99E;
+}
+
+.navItem:first-child {
+  border: none;
+}
+
+.navbar-nav:last-child {
+  border-bottom: 1px solid #B8A99E;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #571D3E;
+  font-size: 1.3rem;
+  font-family: "Pathway Gothic One", sans-serif;
+  font-weight: 400;
+  padding: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #007A8D; 
+  transition: color 0.8s ease;
+}
+
+.offcanvas-body, .offcanvas-header, .canvas-footer, .rdvBtncontainer {
+  background-color: #F4F1E4;
+}
+
+.offcanvas-header {
+  height: 5%;
+  justify-content: end;
+}
+
+.canvas-footer {
+  padding: 0.8em;
+  padding-top: 2em;
+}
+
+.cardNavbar {
+  width: fit-content;
+  height: fit-content;
+  background-color: #F4F1E4;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: center;
+  gap: 20px;
+  border: none;
+  margin-top: 1.5em;
+  padding: 0.8em;
+}
+
+.rdvNav {
+  color: #F4F1E4;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 0.5em;
+  background-color: #571D3E;
+  margin-left: 0.5em;
+  border: none;
+}
+
+.rdvLink {
+  color: #F4F1E4;
+  text-decoration: none;
+}
+
+.phoneInfo, .hoursInfo {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+.hoursInfo {
+  border-top: 1px solid #B8A99E;
+}
+
+.phoneText, .hoursText, .permTel, .permLien, .contactNavbar, .hourItem {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #571D3E;
+}
+
+.phoneText, .hoursText {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  margin-left: 0.8em;
+}
+
+.phoneIcone, .hoursIcone {
+  width: 8%;
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.fa-phone, .fa-clock, .fa-map-marker-alt {
+  color: #571D3E; 
+}
+
+.listHour {
+  list-style: none;
+  padding-left: 0.8em;
+}
+
+.permTel, .permLien {
+  text-decoration: none;
+}
+
+.permLien {
+  text-decoration: underline;
+}
