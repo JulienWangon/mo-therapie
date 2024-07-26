@@ -1,0 +1,19 @@
+{
+    "name": "ottaviani/mo-back",
+    "description": "Backend pour le site web de Mme Ottaviani Marine",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ottaviani\\MoBack\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Julien Wangon",
+            "email": "julien.wangon@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
